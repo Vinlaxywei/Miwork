@@ -14,27 +14,27 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         /*
-        * 创建一个word类的数组，word类由两个String组成，用于填充item中的两个TextView。
-        * 构造函数中第一个实参是第一语言的单词，相应的第二个实参是第二语言的单词
+        * 创建一个word类的数组，用于填充listview
+        * @param 实参01：第一语言的单词、实参02：第二语言的单词、实参03：辅助识别图片
         * */
         ArrayList<Word> numberList = new ArrayList<Word>();
-        numberList.add(new Word("one","lutti"));
-        numberList.add(new Word("two","otiiko"));
-        numberList.add(new Word("two","tolookosu"));
-        numberList.add(new Word("four","oyyisa"));
-        numberList.add(new Word("five","massokka"));
-        numberList.add(new Word("six","temmokka"));
-        numberList.add(new Word("seven","kenekaku"));
-        numberList.add(new Word("eight","kawinta"));
-        numberList.add(new Word("nine","wo’e"));
-        numberList.add(new Word("ten","na’aacha"));
+        numberList.add(new Word("one", getString(R.string.number_one), R.drawable.number_one));
+        numberList.add(new Word("two", getString(R.string.numer_two), R.drawable.number_two));
+        numberList.add(new Word("three", getString(R.string.number_three), R.drawable.number_three));
+        numberList.add(new Word("four", getString(R.string.number_four), R.drawable.number_four));
+        numberList.add(new Word("five", getString(R.string.number_five), R.drawable.number_five));
+        numberList.add(new Word("six", getString(R.string.number_six), R.drawable.number_six));
+        numberList.add(new Word("seven", getString(R.string.number_seven), R.drawable.number_seven));
+        numberList.add(new Word("eight", getString(R.string.nember_eight), R.drawable.number_eight));
+        numberList.add(new Word("nine", getString(R.string.number_nine), R.drawable.number_nine));
+        numberList.add(new Word("ten", getString(R.string.number_ten), R.drawable.number_ten));
 
         /*
-        * 添加一个ArrayAdapter（context，ArrayList<>）
+        * 添加一个WordAdapter（context，ArrayList<>）
         * 添加一个ListView
-        * 绑定ArrayAdapter到ListView
+        * 绑定WordAdapter到ListView
         * */
-        WordsAdapter itemsAdapter = new WordsAdapter(this, numberList);
+        WordAdapter itemsAdapter = new WordAdapter(this, numberList);
         ListView listView = (ListView) findViewById(R.id.word_listview);
         listView.setAdapter(itemsAdapter);
     }

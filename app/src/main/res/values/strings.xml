@@ -27,4 +27,16 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+    <!--第二语言：数字字符串-->
+    <string name="number_one">lutti</string>
+    <string name="numer_two">otiiko</string>
+    <string name="number_three">tolookosu</string>
+    <string name="number_four">oyyisa</string>
+    <string name="number_five">massokka</string>
+    <string name="number_six">temmokka</string>
+    <string name="number_seven">kenekaku</string>
+    <string name="nember_eight">kawinta</string>
+    <string name="number_nine">wo’e</string>
+    <string name="number_ten">na’aacha</string>
 </resources>

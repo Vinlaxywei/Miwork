@@ -3,19 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/list_item_textview02"
+    <ImageView
+        android:id="@+id/list_item_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="lutti" />
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
 
-    <TextView
-        android:id="@+id/list_item_textview01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="one" />
+        <TextView
+            android:id="@+id/list_item_textview02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="lutti" />
 
+        <TextView
+            android:id="@+id/list_item_textview01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="one" />
+
+    </LinearLayout>
 </LinearLayout>
