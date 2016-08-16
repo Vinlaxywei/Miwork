@@ -65,6 +65,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         int color = ContextCompat.getColor(getContext(),itemColorResourceId);
         textContainer.setBackgroundColor(color);
         return listItemView;
+
     }
 }
 

@@ -2,6 +2,8 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -30,5 +32,12 @@ public class ColorsActivity extends AppCompatActivity {
         WordAdapter itemsAdapter = new WordAdapter(this, colorList,R.color.category_colors);
         ListView listView = (ListView) findViewById(R.id.word_listview);
         listView.setAdapter(itemsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                MediaPlayer.create(getBaseContext(),android:R.raw.soun)
+            }
+        });
     }
 }

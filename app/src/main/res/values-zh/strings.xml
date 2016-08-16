@@ -2,7 +2,7 @@
 <resources>
     <string name="number_one">壹</string>
     <string name="number_three">叁</string>
-    <string name="numer_two">贰</string>
+    <string name="number_two">贰</string>
     <string name="number_seven">柒</string>
     <string name="number_six">陆</string>
     <string name="number_ten">拾</string>
@@ -21,8 +21,8 @@
     <string name="color_mustart_yellow">明黄色</string>
     <string name="color_white">白色</string>
     <string name="come_here">过来这里</string>
-    <string name="family_daugher">爸爸</string>
-    <string name="family_father">妈妈</string>
+    <string name="family_daugher">女儿</string>
+    <string name="family_father">爸爸</string>
     <string name="family_grandfather">爷爷</string>
     <string name="family_granmother">奶奶</string>
     <string name="family_mother">妈妈</string>

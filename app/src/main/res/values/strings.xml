@@ -30,7 +30,7 @@
 
     <!--第二语言：数字-->
     <string name="number_one">lutti</string>
-    <string name="numer_two">otiiko</string>
+    <string name="number_two">otiiko</string>
     <string name="number_three">tolookosu</string>
     <string name="number_four">oyyisa</string>
     <string name="number_five">massokka</string>
