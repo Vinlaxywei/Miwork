@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Miwok</string>
     <string name="number_one">壹</string>
     <string name="number_three">叁</string>
     <string name="numer_two">贰</string>
@@ -11,4 +10,36 @@
     <string name="number_four">肆</string>
     <string name="nember_eight">捌</string>
     <string name="number_nine">玖</string>
+    <string name="are_you_coming">你要来吗</string>
+    <string name="category_colors">颜色</string>
+    <string name="color_red">红色</string>
+    <string name="color_black">黑色</string>
+    <string name="color_brown">棕色</string>
+    <string name="color_dusty_yellow">shi黄色</string>
+    <string name="color_gray">灰色</string>
+    <string name="color_green">绿色</string>
+    <string name="color_mustart_yellow">明黄色</string>
+    <string name="color_white">白色</string>
+    <string name="come_here">过来这里</string>
+    <string name="family_daugher">爸爸</string>
+    <string name="family_father">妈妈</string>
+    <string name="family_grandfather">爷爷</string>
+    <string name="family_granmother">奶奶</string>
+    <string name="family_mother">妈妈</string>
+    <string name="family_older_brother">哥哥</string>
+    <string name="family_older_sister">姐姐</string>
+    <string name="family_son">儿子</string>
+    <string name="family_younger_brother">弟弟</string>
+    <string name="family_younger_sister">妹妹</string>
+    <string name="how_are_you_feeling">你感觉怎么样</string>
+    <string name="im_coming">我来了</string>
+    <string name="im_feeeling_good">我感觉不错</string>
+    <string name="lets_go">出发</string>
+    <string name="my_name_is">我的名字是</string>
+    <string name="what_is_you_name">你的名字是什么</string>
+    <string name="where_are_you_going">你在哪里</string>
+    <string name="yes_im_coming">好，我马上来</string>
+    <string name="category_family">家庭成员</string>
+    <string name="category_numbers">数字</string>
+    <string name="category_phrases">短语</string>
 </resources>

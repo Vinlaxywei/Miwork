@@ -6,7 +6,8 @@ package com.example.android.miwok;
 public class Word {
     private String firstLanguage;
     private String secondtLanguage;
-    private int ImageResourceId;
+    private int ImageResourceId=NO_IMAGE_ID;
+    private static final int NO_IMAGE_ID = -1;
 
     /*
     * 构造函数
@@ -51,5 +52,9 @@ public class Word {
     * */
     public int getImageResourceId() {
         return ImageResourceId;
+    }
+
+    public boolean hasImage(){
+        return ImageResourceId != NO_IMAGE_ID;
     }
 }

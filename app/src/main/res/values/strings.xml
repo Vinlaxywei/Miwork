@@ -14,7 +14,7 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Miwok</string>
+    <string name="app_name" translatable="false">Miwok</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="category_phrases">Phrases</string>
@@ -28,7 +28,7 @@
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
 
-    <!--第二语言：数字字符串-->
+    <!--第二语言：数字-->
     <string name="number_one">lutti</string>
     <string name="numer_two">otiiko</string>
     <string name="number_three">tolookosu</string>
@@ -39,4 +39,38 @@
     <string name="nember_eight">kawinta</string>
     <string name="number_nine">wo’e</string>
     <string name="number_ten">na’aacha</string>
+
+    <!--第二语言：颜色-->
+    <string name="color_red">weṭeṭṭi</string>
+    <string name="color_green">chokokki</string>
+    <string name="color_brown">ṭakaakki</string>
+    <string name="color_gray">ṭopoppi</string>
+    <string name="color_black">kululli</string>
+    <string name="color_white">kelelli</string>
+    <string name="color_dusty_yellow">ṭopiisә</string>
+    <string name="color_mustart_yellow">chiwiiṭә</string>
+
+    <!--第二语言：家庭成员-->
+    <string name="family_father">әpә</string>
+    <string name="family_mother">әṭa</string>
+    <string name="family_son">angsi</string>
+    <string name="family_daugher">tune</string>
+    <string name="family_older_brother">taachi</string>
+    <string name="family_younger_brother">chalitti</string>
+    <string name="family_older_sister">teṭe</string>
+    <string name="family_younger_sister">kolliti</string>
+    <string name="family_granmother">ama</string>
+    <string name="family_grandfather">paapa</string>
+
+    <!--第二语言：短语-->
+    <string name="where_are_you_going">minto wuksus</string>
+    <string name="what_is_you_name">tinnә oyaase\'nә</string>
+    <string name="my_name_is">oyaaset...</string>
+    <string name="how_are_you_feeling">michәksәs?</string>
+    <string name="im_feeeling_good">kuchi achit</string>
+    <string name="are_you_coming">әәnәs\'aa?</string>
+    <string name="yes_im_coming">hәә’ әәnәm</string>
+    <string name="im_coming">әәnәm</string>
+    <string name="lets_go">yoowutis</string>
+    <string name="come_here">әnni\'nem</string>
 </resources>

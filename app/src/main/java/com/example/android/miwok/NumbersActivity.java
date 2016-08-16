@@ -30,11 +30,11 @@ public class NumbersActivity extends AppCompatActivity {
         numberList.add(new Word("ten", getString(R.string.number_ten), R.drawable.number_ten));
 
         /*
-        * 添加一个WordAdapter（context，ArrayList<>）
+        * 添加一个WordAdapter（context，ArrayList<>,itemBackgoundResourceId）
         * 添加一个ListView
         * 绑定WordAdapter到ListView
         * */
-        WordAdapter itemsAdapter = new WordAdapter(this, numberList);
+        WordAdapter itemsAdapter = new WordAdapter(this, numberList,R.color.category_numbers);
         ListView listView = (ListView) findViewById(R.id.word_listview);
         listView.setAdapter(itemsAdapter);
     }

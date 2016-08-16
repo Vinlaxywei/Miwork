@@ -18,23 +18,23 @@ public class PhrasesActivity extends AppCompatActivity {
         * @param 实参01：第一语言的单词、实参02：第二语言的单词、实参03：辅助识别图片
         * */
         ArrayList<Word> phraseList = new ArrayList<Word>();
-        phraseList.add(new Word("Where are you going?", "minto wuksus"));
-        phraseList.add(new Word("What is you name?", "tinnә oyaase'nә"));
-        phraseList.add(new Word("My name is...", "oyaaset..."));
-        phraseList.add(new Word("How are you feeling", "michәksәs?"));
-        phraseList.add(new Word("I’m feeling good", "kuchi achit"));
-        phraseList.add(new Word("Are you coming?", "әәnәs'aa?"));
-        phraseList.add(new Word("yes,I’m coming", "hәә’ әәnәm"));
-        phraseList.add(new Word("I’m coming", "әәnәm"));
-        phraseList.add(new Word("Let’s go", "yoowutis"));
-        phraseList.add(new Word("Come here", "әnni'nem"));
+        phraseList.add(new Word("Where are you going?", getString(R.string.where_are_you_going)));
+        phraseList.add(new Word("What is you name?", getString(R.string.what_is_you_name)));
+        phraseList.add(new Word("My name is...", getString(R.string.my_name_is)));
+        phraseList.add(new Word("How are you feeling", getString(R.string.how_are_you_feeling)));
+        phraseList.add(new Word("I’m feeling good", getString(R.string.im_feeeling_good)));
+        phraseList.add(new Word("Are you coming?", getString(R.string.are_you_coming)));
+        phraseList.add(new Word("yes,I’m coming", getString(R.string.yes_im_coming)));
+        phraseList.add(new Word("I’m coming", getString(R.string.im_coming)));
+        phraseList.add(new Word("Let’s go", getString(R.string.lets_go)));
+        phraseList.add(new Word("Come here", getString(R.string.come_here)));
 
         /*
         * 添加一个WordAdapter（context，ArrayList<>）
         * 添加一个ListView
         * 绑定WordAdapter到ListView
         * */
-        WordAdapter itemsAdapter = new WordAdapter(this, phraseList);
+        WordAdapter itemsAdapter = new WordAdapter(this, phraseList,R.color.category_phrases);
         ListView listView = (ListView) findViewById(R.id.word_listview);
         listView.setAdapter(itemsAdapter);
     }
