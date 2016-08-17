@@ -17,7 +17,7 @@ public class NumbersActivity extends AppCompatActivity {
     private AudioManager mAudioManager;
 
     /*
-    * 创建一个全局的Mediaplayer.OncompletionListener，便于Item调用
+    * 定义一个全局的Mediaplayer.OncompletionListener，便于Item调用
     * 执行：调用releaseMediaPlayer方法释放内存
     * */
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
@@ -28,7 +28,7 @@ public class NumbersActivity extends AppCompatActivity {
     };
 
     /*
-    * 创建一个全局的AudioManager.OnAudioFocusChangListener，便于Item调用
+    * 定义一个全局的AudioManager.OnAudioFocusChangListener，便于Item调用
     * 执行：判断当前音频焦点，根据各种情况对应出不同的操作
     * */
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
@@ -55,7 +55,7 @@ public class NumbersActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         /*
-        * 创建一个word类的数组，用于填充listview
+        * 定义一个word类的数组，用于填充listview
         * @param 实参01：第一语言的单词、实参02：第二语言的单词、实参03：辅助识别图片、实参04：辅助识别语音
         * */
         final ArrayList<Word> numberList = new ArrayList<Word>();
@@ -93,12 +93,12 @@ public class NumbersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //播放语音前先释放内存，这样做当用户点击多个item时会释放上一个语音
                 releaseMediaPlayer();
-                //创建一个word类，便于获取辅助识别语音id
+                //定义一个word类，便于获取辅助识别语音id
                 Word word = numberList.get(position);
 
                 /*
-                * 创建int类对象result申请音频焦点
-                * 判断：当前如果有音频焦点，则播放辅助识别语音和后续释放资源等操作
+                * 定义int类型对象result，用于申请音频焦点
+                * 判断：当前如果拥有音频焦点，则播放辅助识别语音和后续释放资源等操作
                 * */
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
@@ -121,10 +121,15 @@ public class NumbersActivity extends AppCompatActivity {
         if (mMediaPlayer != null) {
             mMediaPlayer.release();
             mMediaPlayer = null;
+
+            //放弃音频焦点
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
     }
 
+    /*
+    * 当用户焦点不在此Activity时，释放内存
+    * */
     @Override
     protected void onStop() {
         super.onStop();
