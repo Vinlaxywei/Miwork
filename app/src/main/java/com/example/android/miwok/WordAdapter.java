@@ -51,8 +51,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         textView01.setText(currenWord.getFirstLanguage());
         TextView textView02 = (TextView) listItemView.findViewById(R.id.list_item_textview02);
         textView02.setText(currenWord.getSecondtLanguage());
-
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.list_item_imageview);
+
         if (currenWord.hasImage()) {
             imageView.setImageResource(currenWord.getImageResourceId());
             imageView.setVisibility(View.VISIBLE);

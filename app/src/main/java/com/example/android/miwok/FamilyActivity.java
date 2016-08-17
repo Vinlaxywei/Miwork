@@ -54,8 +54,8 @@ public class FamilyActivity extends AppCompatActivity {
         familyList.add(new Word("younger brother", getString(R.string.family_younger_brother), R.drawable.family_younger_brother, R.raw.family_younger_brother));
         familyList.add(new Word("older sister", getString(R.string.family_older_sister), R.drawable.family_older_sister, R.raw.family_older_sister));
         familyList.add(new Word("younger sister", getString(R.string.family_younger_sister), R.drawable.family_younger_sister, R.raw.family_younger_sister));
-        familyList.add(new Word("grandmother", getString(R.string.family_granmother), R.drawable.family_grandmother, R.raw.family_grandfather));
-        familyList.add(new Word("grandfather", getString(R.string.family_grandfather), R.drawable.family_father, R.raw.family_grandmother));
+        familyList.add(new Word("grandmother", getString(R.string.family_granmother), R.drawable.family_grandmother, R.raw.family_grandmother));
+        familyList.add(new Word("grandfather", getString(R.string.family_grandfather), R.drawable.family_father, R.raw.family_grandfather));
 
         WordAdapter itemsAdapter = new WordAdapter(this, familyList, R.color.category_family);
         ListView listView = (ListView) findViewById(R.id.word_listview);
