@@ -10,16 +10,20 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
+    private String LOG_TAG = FamilyActivity.class.getSimpleName();
+    private MediaPlayer mMediaPlayer;
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            releaseMediaPlayer();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        /*
-        * 创建一个word类的数组，用于填充listview
-        * @param 实参01：第一语言的单词、实参02：第二语言的单词、实参03：辅助识别图片
-        * */
         final ArrayList<Word> familyList = new ArrayList<Word>();
         familyList.add(new Word("father", getString(R.string.family_father), R.drawable.family_father,R.raw.family_father));
         familyList.add(new Word("mother", getString(R.string.family_mother), R.drawable.family_mother,R.raw.family_mother));
@@ -39,9 +43,31 @@ public class FamilyActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //播放语音前先释放内存，这样做当用户点击多个item时会释放上一个语音
+                releaseMediaPlayer();
+
                 Word word = familyList.get(position);
-                MediaPlayer.create(getBaseContext(),word.getVoiceResourceId()).start();
+                mMediaPlayer = MediaPlayer.create(getBaseContext(), word.getVoiceResourceId());
+                mMediaPlayer.start();
+                mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });
+    }
+
+    /*
+    * 当用户点击item时播放辅助识别语音，播放完毕后调用此方法释放内存
+    * if判断语音是否为空，如果不为空，则执行释放内存操作，并将语音设为空
+    * */
+    private void releaseMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 }
