@@ -1,32 +1,32 @@
 package com.example.android.miwok;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // 指定layout，其中包含一个ViewPager
         setContentView(R.layout.activity_main);
-    }
 
-    public void startNumbersActivity(View v) {
-        startActivity(new Intent(getBaseContext(),NumbersActivity.class));
-    }
+        // 调用ViewPager
+        ViewPager viewPager = (ViewPager) findViewById(R.id.ViewPager);
 
-    public void startFamilyActivity(View v) {
-        startActivity(new Intent(getBaseContext(),FamilyActivity.class));
-    }
+        // 定义一个CategoryAdapter类型的对象，call adapter
+        CategoryAdapter adapter = new CategoryAdapter(getBaseContext(),getSupportFragmentManager());
 
-    public void startColorsActivity(View v) {
-        startActivity(new Intent(getBaseContext(),ColorsActivity.class));
-    }
+        // 设定适配器到ViewPager上
+        viewPager.setAdapter(adapter);
 
-    public void startPhrasesActivity(View v) {
-        startActivity(new Intent(getBaseContext(),PhrasesActivity.class));
+        //调用TabLayout
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.scrolTab);
+        //绑定TabLayout和ViewPager
+        tabLayout.setupWithViewPager(viewPager);
     }
 
 }
