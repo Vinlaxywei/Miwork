@@ -9,5 +9,7 @@ Miwok App ：学习一点常用的外语词汇 :)
 
 应用演示
 ---- 
-https://github.com/Vinlaxywei/Miwork/blob/master/app/miwok-main%20.png
+![Build Status](https://github.com/Vinlaxywei/Screen-Shot/blob/master/main-popular.png?branch=master)
+![Build Status](https://github.com/Vinlaxywei/Miwork/blob/master/app/miwok-main%20.png?branch=master)
+
 
